@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,14 +50,82 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
+
+
 
 html, body {
     height: 100%;
 }
 
 body {
-	color: red;
+	background-image: url(/images/triangles-download\ \(2\).svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap');
+
+@roboto:'Roboto Slab', serif;
+@raleway: 'Raleway', sans-serif;
+@lightcolor: #FFDEFF;
+@darkcolor: #D29EFF;
+
+.flexrow(){
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.flexcolwrap(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+body {
+	font-family: @roboto;
+	margin: 0 auto;
+	width: 80%;
+	.flexrow();
+	.highlight {
+		background-color: #004F76;
+		width:20%;
+		color: @darkcolor;
+		padding-bottom: 40vh;
+		.flexcolwrap();
+		img {
+			align-self: center;
+			width: 100%;
+			
+		}
+	
+		h1{
+			font-family: @raleway;
+			font-size: 2rem;
+		}
+		
+	}
+	.details{
+		width:76%;
+		color: @lightcolor;
+		.flexcolwrap;
+	}
+
+	@media (max-width: 500px){
+		.flexcolwrap();
+		.highlight{
+			width: 90%;
+			padding:0;
+			img{
+				display: none;
+			}
+		}
+	}
 }
