@@ -55,7 +55,7 @@ table {
 
 * {
 	box-sizing: border-box;
-	
+	font-size: 62.5%;
 }
 
 
@@ -65,7 +65,7 @@ html, body {
 }
 
 body {
-	background-image: url(/images/triangles-download\ \(2\).svg);
+	background-image: url(/images/triangles-download.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -74,8 +74,9 @@ body {
 
 @roboto:'Roboto Slab', serif;
 @raleway: 'Raleway', sans-serif;
-@lightcolor: #FFDEFF;
-@darkcolor: #D29EFF;
+@lightcolor: #8AF3FF;
+@darkcolor: #484349;
+@highlights: #F7F0F0;
 
 .flexrow(){
 	display: flex;
@@ -86,41 +87,63 @@ body {
 .flexcolwrap(){
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	
 }
 
 body {
 	font-family: @roboto;
 	margin: 0 auto;
 	width: 80%;
-	.flexrow();
-	.highlight {
-		background-color: #004F76;
-		width:20%;
-		color: @darkcolor;
+	// .flexrow();
+	.sidebar {
+		background-color: rgba(0, 102, 102, 0.76);
+		width:300px;
+		color: @lightcolor;
+		line-height: 2rem;
 		padding-bottom: 40vh;
 		.flexcolwrap();
 		img {
 			align-self: center;
 			width: 100%;
-			
+
 		}
 	
 		h1{
 			font-family: @raleway;
 			font-size: 2rem;
+			text-align: center;
+			margin-top: 2rem;
 		}
+
+		#contact{
+			margin: 2rem auto;
+			width: 80%;
+			#socials {
+				display:flex;
+				justify-content: space-between;
+				a {
+					color: @lightcolor;
+					height: 20px;
+					text-decoration: none;
+					&:hover{
+						color:@highlights;
+					}
+				}
+			}
+		}
+		
 		
 	}
 	.details{
-		width:76%;
+		width:90%;
+		margin: 0 auto;
 		color: @lightcolor;
 		.flexcolwrap;
 	}
 
 	@media (max-width: 500px){
 		.flexcolwrap();
-		.highlight{
+		.sidebar{
 			width: 90%;
 			padding:0;
 			img{

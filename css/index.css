@@ -129,13 +129,14 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 html,
 body {
   height: 100%;
 }
 body {
-  background-image: url(/images/triangles-download\ \(2\).svg);
+  background-image: url(/images/triangles-download.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -157,45 +158,59 @@ body {
   font-family: 'Roboto Slab', serif;
   margin: 0 auto;
   width: 80%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
-body .highlight {
-  background-color: #004F76;
-  width: 20%;
-  color: #D29EFF;
+body .sidebar {
+  background-color: rgba(0, 102, 102, 0.76);
+  width: 300px;
+  color: #8AF3FF;
+  line-height: 2rem;
   padding-bottom: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
-body .highlight img {
+body .sidebar img {
   align-self: center;
   width: 100%;
 }
-body .highlight h1 {
+body .sidebar h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+body .sidebar #contact {
+  margin: 2rem auto;
+  width: 80%;
+}
+body .sidebar #contact #socials {
+  display: flex;
+  justify-content: space-between;
+}
+body .sidebar #contact #socials a {
+  color: #8AF3FF;
+  height: 20px;
+  text-decoration: none;
+}
+body .sidebar #contact #socials a:hover {
+  color: #F7F0F0;
 }
 body .details {
-  width: 76%;
-  color: #FFDEFF;
+  width: 90%;
+  margin: 0 auto;
+  color: #8AF3FF;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 @media (max-width: 500px) {
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
-  body .highlight {
+  body .sidebar {
     width: 90%;
     padding: 0;
   }
-  body .highlight img {
+  body .sidebar img {
     display: none;
   }
 }
